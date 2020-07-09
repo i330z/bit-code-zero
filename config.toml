@@ -1,6 +1,6 @@
 baseURL = "https://gifted-murdock-124959.netlify.app"
 languageCode = "en-us"
-title = "Zblog"
+title = "bitcodezero"
 theme= "hugo-classic"
 googleAnalytics = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
