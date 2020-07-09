@@ -1,0 +1,35 @@
+baseURL = ""
+languageCode = "en-us"
+title = "Zblog"
+theme= "hugo-classic"
+googleAnalytics = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+enableEmoji = true
+footnotereturnlinkcontents = "↩"
+[taxonomies]
+    tag = "tags"
+    category = "categories" 
+[permalinks]
+    post = "/post/:year/:month/:day/:slug/"
+
+[[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 1
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+[[menu.main]]
+    name = "Links"
+    url = "/links/"
+    weight = 2
+[[menu.feed]]
+    name = "Subscribe"
+    url = "/index.xml"
+
+[params]
+    description = "A simple, minimal blog for those who love text."
+    footer = "izzazahmed134@gmail.com | [Github](https://github.com/i330z)"
+    custom_css = ["css/theme-override.css"]
+
