@@ -171,3 +171,63 @@ term
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media
+
+
+
+### UPDATE
+
+To add Code snippets, you can use 
+
+```
+
+{{ < highlight javascript > }} (Dont leave spaces between brackets and the less/greater signs)
+//  OpenShift sample Node application
+var express = require('express'),
+    fs      = require('fs'),
+    app     = express(),
+    eps     = require('ejs'),
+    morgan  = require('morgan');
+    
+Object.assign=require('object-assign')
+
+app.engine('html', require('ejs').renderFile);
+app.use(morgan('combined'))
+
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
+    mongoURL = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL,
+    mongoURLLabel = "";
+{{ < /highlight > }} (Dont leave spaces between brackets and the less/greater signs)
+
+
+```
+RESULT
+
+{{< highlight javascript >}}
+//  OpenShift sample Node application
+var express = require('express'),
+    fs      = require('fs'),
+    app     = express(),
+    eps     = require('ejs'),
+    morgan  = require('morgan');
+    
+Object.assign=require('object-assign')
+
+app.engine('html', require('ejs').renderFile);
+app.use(morgan('combined'))
+
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
+    mongoURL = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL,
+    mongoURLLabel = "";
+{{< /highlight >}}
+
+
+To show git gist use
+```
+{{  < gist dischord01 f43dbb1b2cdfc4c3802f  >  }} (Dont leave spaces between brackets and the less/greater signs)
+
+```
+RESULT
+
+{{< gist dischord01 f43dbb1b2cdfc4c3802f  >}}
